@@ -29,9 +29,11 @@ print(f"The 'survived.csv' file has been created with only the survivor informat
 
 
 def filter_and_create_ssl_companies_csv(input_file, output_file):
+
     ssl_companies = []
 
     with open(input_file, "r") as input_csv:
+
         reader = csv.DictReader(input_csv)
 
         fieldnames = ["Index", "Organization Id", "Name", "Website", "Industry", "Number of employees"]
